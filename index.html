@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weatherly | Live Weather</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Header -->
+        <header class="topbar">
+            <a class="brand" href="#">
+                <span class="brand-icon">☼</span>
+                Weatherly<span class="dot">.</span>
+            </a>
+
+            <span class="live-label">
+                <span class="live-dot"></span>
+                LIVE WEATHER
+            </span>
+        </header>
+
+        <!-- Introduction -->
+        <section class="intro">
+            <p class="eyebrow">YOUR WEATHER, AT A GLANCE</p>
+
+            <h1>
+                A little more clarity<br>
+                <span>in every forecast.</span>
+            </h1>
+
+            <p class="intro-text">
+                Real-time weather conditions for your city.
+            </p>
+        </section>
+
+        <!-- Weather Dashboard -->
+        <section class="weather-panel">
+
+            <!-- Search -->
+            <form id="search-form" class="search-form">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="city-input"
+                    placeholder="Search a city..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" id="search-button">
+                    Search ↗
+                </button>
+
+            </form>
+
+            <!-- Status Message -->
+            <div id="status" class="status">
+                Enter a city to see its current weather.
+            </div>
+
+            <!-- Loading -->
+            <div id="loading" class="loading" hidden>
+                <span class="spinner"></span>
+                Fetching weather data...
+            </div>
+
+            <!-- Weather Information -->
+            <div id="weather-content" hidden>
+
+                <div class="weather-main">
+
+                    <div>
+                        <p class="eyebrow light">
+                            CURRENT WEATHER
+                        </p>
+
+                        <h2 id="place-name">City Name</h2>
+
+                        <p id="local-time" class="local-time">
+                            Local time
+                        </p>
+                    </div>
+
+                    <div class="temperature-section">
+
+                        <span id="weather-icon" class="weather-icon">
+                            ☀
+                        </span>
+
+                        <div>
+                            <div class="temperature">
+                                <span id="temperature">--</span>
+                                <sup>°C</sup>
+                            </div>
+
+                            <p id="condition" class="condition">
+                                Weather condition
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- Weather Details -->
+                <div class="metrics">
+
+                    <article class="metric">
+                        <span class="metric-icon">◉</span>
+                        <span class="metric-label">FEELS LIKE</span>
+
+                        <strong>
+                            <span id="feels-like">--</span>
+                            <small>°C</small>
+                        </strong>
+                    </article>
+
+                    <article class="metric">
+                        <span class="metric-icon">◌</span>
+                        <span class="metric-label">HUMIDITY</span>
+
+                        <strong>
+                            <span id="humidity">--</span>
+                            <small>%</small>
+                        </strong>
+                    </article>
+
+                    <article class="metric">
+                        <span class="metric-icon">〰</span>
+                        <span class="metric-label">WIND SPEED</span>
+
+                        <strong>
+                            <span id="wind-speed">--</span>
+                            <small>km/h</small>
+                        </strong>
+                    </article>
+
+                    <article class="metric">
+                        <span class="metric-icon">☂</span>
+                        <span class="metric-label">PRECIPITATION</span>
+
+                        <strong>
+                            <span id="precipitation">--</span>
+                            <small>mm</small>
+                        </strong>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <span>Built with HTML, CSS, JavaScript & AJAX</span>
+
+            <span>
+                Weather data by
+                <a href="https://open-meteo.com/" target="_blank">
+                    Open-Meteo
+                </a>
+            </span>
+        </footer>
+
+    </main>
+
+</body>
+</html>
